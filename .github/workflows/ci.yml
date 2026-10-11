@@ -12,3 +12,11 @@ jobs:
       - name: "Echo the message"
         run : |
           echo "Hola ronald"
+      - name: "Fecha de hoy"
+        run: date
+      - name: "Listar archivos"
+        run: ls -la
+      - name: "Mostrar directorio actual"
+        run : pwd
+      - name: "Mostrar quien soy"
+        run: whoami
