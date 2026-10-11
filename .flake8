@@ -1,0 +1,2 @@
+# Ignora reglas específicas separadas por comas
+ignore =  W292 #no newline at end of file, por ejemplo para el ultimo salto de línea que lo ignore.
