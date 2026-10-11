@@ -1,0 +1,32 @@
+name: "Deployment pipeline"
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: "Clonamos el código"
+        uses: actions/checkout@v7
+
+      - name: "Dejamos listo la máquina"
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.13'
+          cache: 'pip'
+
+      - name: "Instalamos dependencias"
+        run: |
+          pip install -m pip --upgrade
+          pip install -r requirements.txt
+
+      - name: "Ejecutamos los tests"
+        run : python -m pytest
+
+      - name : "Validamos el formato de código"
+        run: flake8 .
+
+      
