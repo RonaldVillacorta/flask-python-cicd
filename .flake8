@@ -1,2 +1,2 @@
-# Ignora reglas específicas separadas por comas
+[flake8]
 ignore =  W292 #no newline at end of file, por ejemplo para el ultimo salto de línea que lo ignore.
