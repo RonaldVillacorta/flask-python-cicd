@@ -1,2 +1,34 @@
 [flake8]
 ignore =  W292 #no newline at end of file, por ejemplo para el ultimo salto de línea que lo ignore.
+
+
+; Comenté o quité la configuración de lint con flaske8 porque me dio estos errores de comentario y por ahora solo ando practicando:
+
+; Run flake8 .
+  
+; Traceback (most recent call last):
+;   File "/opt/hostedtoolcache/Python/3.13.16/x64/bin/flake8", line 6, in <module>
+;     sys.exit(main())
+;              ~~~~^^
+;   File "/opt/hostedtoolcache/Python/3.13.16/x64/lib/python3.13/site-packages/flake8/main/cli.py", line 23, in main
+;     app.run(argv)
+;     ~~~~~~~^^^^^^
+;   File "/opt/hostedtoolcache/Python/3.13.16/x64/lib/python3.13/site-packages/flake8/main/application.py", line 198, in run
+;     self._run(argv)
+;     ~~~~~~~~~^^^^^^
+;   File "/opt/hostedtoolcache/Python/3.13.16/x64/lib/python3.13/site-packages/flake8/main/application.py", line 186, in _run
+;     self.initialize(argv)
+;     ~~~~~~~~~~~~~~~^^^^^^
+;   File "/opt/hostedtoolcache/Python/3.13.16/x64/lib/python3.13/site-packages/flake8/main/application.py", line 165, in initialize
+;     self.plugins, self.options = parse_args(argv)
+;                                  ~~~~~~~~~~^^^^^^
+;   File "/opt/hostedtoolcache/Python/3.13.16/x64/lib/python3.13/site-packages/flake8/options/parse_args.py", line 53, in parse_args
+;     opts = aggregator.aggregate_options(option_manager, cfg, cfg_dir, rest)
+;   File "/opt/hostedtoolcache/Python/3.13.16/x64/lib/python3.13/site-packages/flake8/options/aggregator.py", line 30, in aggregate_options
+;     parsed_config = config.parse_config(manager, cfg, cfg_dir)
+;   File "/opt/hostedtoolcache/Python/3.13.16/x64/lib/python3.13/site-packages/flake8/options/config.py", line 131, in parse_config
+;     raise ValueError(
+;     ...<3 lines>...
+;     )
+; ValueError: Error code '#no' supplied to 'ignore' option does not match '^[A-Z]{1,3}[0-9]{0,3}$'
+; Error: Process completed with exit code 1.
