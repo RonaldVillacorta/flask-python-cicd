@@ -20,3 +20,7 @@ jobs:
         run : pwd
       - name: "Mostrar quien soy"
         run: whoami
+      - name: "Mostrar la ip"
+        run : |
+          hostname -I
+          curl ifconfig.me
